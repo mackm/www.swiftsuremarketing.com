@@ -5,179 +5,89 @@
  *
  */
  
-/* apply a natural box layout model to all elements */
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+/* Include padding within the width, instead of in-addition */ 
+ * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-.clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
+/* Set up the site for small devices like phones in portrait mode */
+/* Designed to look good between 300px and 400px									*/
+
+html {
+  width:100%;
+  margin:0 auto;
+  text-align:center;
+  font-family:Helvetica, Arial, sans-serif;
 }
- 
-.clearfix {
-	display: inline-block;
-}
- 
-html[xmlns] .clearfix {
-	display: block;
-}
- 
-* html .clearfix {
-	height: 1%;
-}
- 
+
 body {
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	min-width:300px;
-	float:left;
-	width:90%;  /* BUG */
-	margin:0;
-	padding:0;
-}
- 
-p {
-	margin:0;
-	padding:0;
-}
- 
-img {
-	max-width:100%;
-}
-
-#page-wrapper, #page, #sidebar-wrapper, #content, #navigation, #footer, #sidebar-first, #sidebar-second, #block-views-page-of-articles-block, #logo, #header{
-	float:left;
-}
-
-#page-wrapper, #page, #sidebar-wrapper, #content, #navigation, #main, #sidebar-first, #sidebar-second, #block-views-page-of-articles-block, #logo, #header {
-	width:100%;
+ margin:0 auto;
+ padding:0
+ text-align:center;
+ width:100%;
+ font-size:14px;
+ max-width:840px;
 }
 
 #page-wrapper {
-	margin-left:10px;
+	margin:0 auto;
+	position:relative;
+	width:100%;
+	text-align:left;
+	padding-left:20px;
+	padding-right:20px;
+	min-width:290px;
 }
 
-#sidebar-wrapper {
-	margin: 0 1em 0 1em;
+#logo img {
+	max-width:100%;
+	height:auto;
 }
 
-#block-views-page-of-articles-block p {
-	margin:1em;
+a {
+	color:#4C4C4C;
 }
 
-.views-field-body {
-	display:none;
+#header,
+.region-header {
+	float:left;
+	width:100%;
+	position:relative;
 }
 
-#block-views-page-of-articles-block .views-field-title a {
-	display:list-item;
-	list-style:none;
-	text-decoration:none;
-	background-color:#cce2d5;
-	margin: .25em 0 .25em 0;
-	border-radius:8px;
-	padding:.5em 0;
-	font-size:1.2em;
-	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-	text-align:center;
+#block-system-main {
+	float:left;
+	width:100%;
+	margin-top:20px;
+}
+
+hr {
+  background: #ddd; 
+  clear: both; 
+  float: none; 
+  width: 100%; 
+  height: 1px;
+  margin: 0 0 1.4em;
+  border: none; 
+}
+
+#sites {
+	float:left;
 	width:100%;
 }
 
-#top-menu {
-	float:right;
-}
-
-#top-menu ul {
-	margin:0;
-	padding:0;
-	z-index:99;
-}
-
-#top-menu ul li {
-	display:list-item;
-	list-style:none;
+.site {
 	float:left;
-	margin:0;
-	padding:0 1em 0 0;
-	font-size:.8em;
+	width:200px;
+	padding:10px;
+	height:200px;
+	text-align:center;
 }
 
-#top-menu ul li a {
-	text-decoration:none;
-
-	
+.caption {
+	padding-top:4px;
+	display:block;
+	float:left;
+	width:100%;
+	color:#4C4C4C;
+	text-align:center;
 }
-
-@media screen and (max-width:400px) {
-	
-	body {
-		font-size:12px;
-	}
-}
-
-@media screen and (min-width:400px) {
-	
-	#logo {
-		width:400px;
-	}
-}
-
-@media screen and (min-width:768px ) {
-	
-	.view-page-of-articles .views-row .views-field-body {
-	    display:block;
-    }
-	
-	.view-page-of-articles .views-row .views-field-body p {
-		text-align:justify;
-	}
-	
-	#block-views-page-of-articles-block .views-field-title a {
-		padding:.1em 0;
-	}
-	p {
-		margin:.5em 0 .5em 0;
-	}
-}
-
-@media screen and (min-width:1024px) {
-	
-	#content {
-		float:left;
-	    width:62%;
-    }
-	
-	#sidebar-wrapper {
-		width:34%;
-		margin-top:2em;
-		padding-left:2em;
-	}
-	
-	#sidebar-wrapper h2 {
-		font-size:14px;
-		
-	}
-	
-	#sidebar-wrapper p {
-		font-size:14px;
-	}
-	
-	.view-page-of-articles p {
-		margin-left:1em;
-	ß}
-}
-
-
-ul#main-menu li a {
-	text-decoration:none;
-	color:#323232;	
-}
-
-#sidebar-second {
-  float: left; /* LTR */
-  width: 100%;
-}
-
 
